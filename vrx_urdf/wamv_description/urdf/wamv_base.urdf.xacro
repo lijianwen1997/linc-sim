@@ -7,7 +7,7 @@
   <xacro:macro name="main_collisions" params="prefix reflect:=1">
     <!-- Main float -->
     <collision name="${prefix}_float">
-      <origin xyz="-0.4 ${1.03*reflect} 0.2" rpy="${0*reflect} 1.57 0" />
+      <origin xyz="-0.4 ${1.03*reflect} 0.3" rpy="${0*reflect} 1.57 0" />
       <geometry>
         <cylinder length="4" radius="0.2" />
       </geometry>
