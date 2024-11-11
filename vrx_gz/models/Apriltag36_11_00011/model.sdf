@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='Apriltag36_11_00010'>
+  <model name='Apriltag36_11_00011'>
     <link name='main'>
     <pose frame=''>0 0 0 0 0 0</pose>
       <visual name='main_Visual'>
@@ -14,7 +14,7 @@
           <specular>1.0 1.0 1.0</specular>
           <pbr>
             <metal>
-              <albedo_map>materials/textures/tag36_11_00010.png</albedo_map>
+              <albedo_map>materials/textures/tag36_11_00011.png</albedo_map>
               <metalness>0</metalness>
             </metal>
           </pbr>
