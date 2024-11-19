@@ -397,19 +397,19 @@
 
     <include>
       <name>tag_10</name>
-      <uri>model://Apriltag36_11_00000</uri>
+      <uri>model://Apriltag36_11_00010</uri>
       <pose>-75.43 -147.54 1.41 -1.57 0 1.30</pose>
     </include>
 
     <include>
       <name>tag_11</name>
-      <uri>model://Apriltag36_11_00001</uri>
+      <uri>model://Apriltag36_11_00011</uri>
       <pose>-76.1 -149.85 1.41 -1.57 0 1.30</pose>
     </include>
 
     <include>
       <name>tag_12</name>
-      <uri>model://Apriltag36_11_00002</uri>
+      <uri>model://Apriltag36_11_00012</uri>
       <pose>-76.72 -152.16 1.41 -1.57 0 1.30</pose>
     </include>
 
