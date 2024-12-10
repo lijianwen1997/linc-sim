@@ -113,11 +113,6 @@
       </profile_COMMON>
     </effect>
   </library_effects>
-  <library_images>
-    <image id="EXPORT_GOOGLE_SAT_WM" name="EXPORT_GOOGLE_SAT_WM">
-      <init_from>EXPORT_GOOGLE_SAT_WM.tif</init_from>
-    </image>
-  </library_images>
   <library_materials>
     <material id="rastMat-material" name="rastMat">
       <instance_effect url="#rastMat-effect"/>
