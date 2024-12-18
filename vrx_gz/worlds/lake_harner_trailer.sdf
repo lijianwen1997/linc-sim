@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <sdf version="1.9">
-  <world name="lake_harner">
+  <world name="lake_harner_trailer">
 
     <physics name="4ms" type="dart">
       <max_step_size>0.004</max_step_size>
@@ -29,8 +29,6 @@
         </camera_clip>
       </plugin>
 
-
-
       <!-- Plugins that add functionality to the scene -->
       <plugin filename="EntityContextMenuPlugin" name="Entity context menu">
         <gz-gui>
@@ -40,7 +38,6 @@
           <property key="showTitleBar" type="bool">false</property>
         </gz-gui>
       </plugin>
-
       <plugin filename="GzSceneManager" name="Scene Manager">
         <gz-gui>
           <property key="resizable" type="bool">false</property>
@@ -355,53 +352,6 @@
       <uri>coast_waves</uri>
     </include>
 
-    <include>
-      <name>robotx_light_buoy_rgb</name>
-      <pose>-55.0 -150.0 1.0 0 0 0</pose>
-      <uri>robotx_light_buoy_rgb</uri>
-
-      <plugin name="vrx::PolyhedraBuoyancyDrag"
-              filename="libPolyhedraBuoyancyDrag.so">
-        <fluid_density>1000</fluid_density>
-        <fluid_level>0.0</fluid_level>
-        <linear_drag>1000.0</linear_drag>
-        <angular_drag>200.0</angular_drag>
-        <buoyancy name="buoyancy_base">
-          <link_name>base_link</link_name>
-          <pose>0 0 -0.1 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>1.5 1.5 0.4</size>
-            </box>
-          </geometry>
-        </buoyancy>
-        <buoyancy name="buoyancy_body">
-          <link_name>base_link</link_name>
-          <pose>0 0 0.8 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.2</radius>
-              <length>0.15</length>
-            </cylinder>
-          </geometry>
-        </buoyancy>
-        <wavefield>
-          <topic>/vrx/wavefield/parameters</topic>
-        </wavefield>
-      </plugin>
-    </include>
-
-     <include>
-      <name>dock</name>
-      <uri>model://dock_2022_base</uri>
-      <pose>-75.76 -147.67 0 0 0 -1.84</pose>
-    </include>
-
-    <include>
-      <name>dock_2</name>
-      <uri>model://dock_2022_para</uri>
-      <pose>-81 -145.6 0 0 0 -1.84</pose>
-    </include>
 
     <include>
       <name>truck</name>
@@ -413,42 +363,6 @@
       <name>trailer</name>
       <uri>model://trailer</uri>
       <pose> -51.37 -157.0 -0.15 0 0.039 1.57</pose>
-    </include>
-
-    <include>
-      <name>tag_0</name>
-      <uri>model://Apriltag36_11_00000</uri>
-      <pose>-68.63 -155.47 1.41 -1.57 0 -0.27</pose>
-    </include>
-
-    <include>
-      <name>tag_1</name>
-      <uri>model://Apriltag36_11_00001</uri>
-      <pose>-65.74 -156.23 1.41 -1.57 0 -0.27</pose>
-    </include>
-
-    <include>
-      <name>tag_2</name>
-      <uri>model://Apriltag36_11_00002</uri>
-      <pose>-71.41 -154.66 1.41 -1.57 0 -0.27</pose>
-    </include>
-
-    <include>
-      <name>tag_10</name>
-      <uri>model://Apriltag36_11_00010</uri>
-      <pose>-75.43 -147.54 1.41 -1.57 0 1.30</pose>
-    </include>
-
-    <include>
-      <name>tag_11</name>
-      <uri>model://Apriltag36_11_00011</uri>
-      <pose>-76.1 -149.85 1.41 -1.57 0 1.30</pose>
-    </include>
-
-    <include>
-      <name>tag_12</name>
-      <uri>model://Apriltag36_11_00012</uri>
-      <pose>-76.72 -152.16 1.41 -1.57 0 1.30</pose>
     </include>
 
 

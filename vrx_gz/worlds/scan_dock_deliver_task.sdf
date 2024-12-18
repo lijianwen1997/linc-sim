@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <sdf version="1.9">
-  <world name="lake_harner">
+  <world name="scan_dock_deliver_task">
 
     <physics name="4ms" type="dart">
       <max_step_size>0.004</max_step_size>
@@ -22,14 +22,12 @@
         <scene>scene</scene>
         <ambient_light>0.4 0.4 0.4</ambient_light>
         <background_color>0.8 0.8 0.8</background_color>
-        <camera_pose>-60 -134 5.7 0 0.39 -1.8</camera_pose>
+        <camera_pose>-478.1 148.2 13.2 0 0.25 2.94</camera_pose>
         <camera_clip>
           <near>0.25</near>
           <far>10000</far>
         </camera_clip>
       </plugin>
-
-
 
       <!-- Plugins that add functionality to the scene -->
       <plugin filename="EntityContextMenuPlugin" name="Entity context menu">
@@ -40,7 +38,6 @@
           <property key="showTitleBar" type="bool">false</property>
         </gz-gui>
       </plugin>
-
       <plugin filename="GzSceneManager" name="Scene Manager">
         <gz-gui>
           <property key="resizable" type="bool">false</property>
@@ -319,13 +316,13 @@
       <background>0.8 0.8 0.8</background>
     </scene>
 
-    <!-- Estimated latitude/longitude of lake harner
+    <!-- Estimated latitude/longitude of sydneyregatta
          from satellite imagery -->
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <world_frame_orientation>ENU</world_frame_orientation>
-      <latitude_deg>40.448417</latitude_deg>
-      <longitude_deg>-86.867750</longitude_deg>
+      <latitude_deg>-33.724223</latitude_deg>
+      <longitude_deg>150.679736</longitude_deg>
       <elevation>0.0</elevation>
       <heading_deg>0.0</heading_deg>
     </spherical_coordinates>
@@ -345,8 +342,8 @@
     </light>
 
     <include>
-      <pose> -54 45 -43 0 0 0 </pose>
-      <uri>model://lake_harner</uri>
+      <pose> 0 0 0.2 0 0 0 </pose>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/sydney_regatta</uri>
     </include>
 
     <include>
@@ -356,8 +353,13 @@
     </include>
 
     <include>
+      <name>platform</name>
+      <uri>platform</uri>
+    </include>
+
+    <include>
       <name>robotx_light_buoy_rgb</name>
-      <pose>-55.0 -150.0 1.0 0 0 0</pose>
+      <pose>-528 186 0.32 0 0 0</pose>
       <uri>robotx_light_buoy_rgb</uri>
 
       <plugin name="vrx::PolyhedraBuoyancyDrag"
@@ -391,68 +393,6 @@
       </plugin>
     </include>
 
-     <include>
-      <name>dock</name>
-      <uri>model://dock_2022_base</uri>
-      <pose>-75.76 -147.67 0 0 0 -1.84</pose>
-    </include>
-
-    <include>
-      <name>dock_2</name>
-      <uri>model://dock_2022_para</uri>
-      <pose>-81 -145.6 0 0 0 -1.84</pose>
-    </include>
-
-    <include>
-      <name>truck</name>
-      <uri>model://truck</uri>
-      <pose> -52.30 -163.78 -0.528 -0.28 0 0.02</pose>
-    </include>
-
-    <include>
-      <name>trailer</name>
-      <uri>model://trailer</uri>
-      <pose> -51.37 -157.0 -0.15 0 0.039 1.57</pose>
-    </include>
-
-    <include>
-      <name>tag_0</name>
-      <uri>model://Apriltag36_11_00000</uri>
-      <pose>-68.63 -155.47 1.41 -1.57 0 -0.27</pose>
-    </include>
-
-    <include>
-      <name>tag_1</name>
-      <uri>model://Apriltag36_11_00001</uri>
-      <pose>-65.74 -156.23 1.41 -1.57 0 -0.27</pose>
-    </include>
-
-    <include>
-      <name>tag_2</name>
-      <uri>model://Apriltag36_11_00002</uri>
-      <pose>-71.41 -154.66 1.41 -1.57 0 -0.27</pose>
-    </include>
-
-    <include>
-      <name>tag_10</name>
-      <uri>model://Apriltag36_11_00010</uri>
-      <pose>-75.43 -147.54 1.41 -1.57 0 1.30</pose>
-    </include>
-
-    <include>
-      <name>tag_11</name>
-      <uri>model://Apriltag36_11_00011</uri>
-      <pose>-76.1 -149.85 1.41 -1.57 0 1.30</pose>
-    </include>
-
-    <include>
-      <name>tag_12</name>
-      <uri>model://Apriltag36_11_00012</uri>
-      <pose>-76.72 -152.16 1.41 -1.57 0 1.30</pose>
-    </include>
-
-
-
     <!-- The posts for securing the WAM-V -->
     <include>
       <name>post_0</name>
@@ -476,6 +416,22 @@
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/antenna</uri>
     </include>
 
+    <!-- ground station tents -->
+    <include>
+      <name>ground_station_0</name>
+      <pose>-540.796448 146.493744 1.671421 -0.00834 0.01824 1.301726</pose>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/ground_station</uri>
+    </include>
+    <include>
+      <name>ground_station_1</name>
+      <pose>-537.622681 145.827896 1.681931 -0.00603 0.018667 1.301571</pose>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/ground_station</uri>
+    </include>
+    <include>
+      <name>ground_station_2</name>
+      <pose>-534.550537 144.910400 1.720474 -0.004994 0.020798 1.301492</pose>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/ground_station</uri>
+    </include>
 
     <!-- The projectile for the ball shooter -->
     <include>
@@ -503,6 +459,18 @@
       </plugin>
     </include>
 
+    <!-- Needed to detect the projectile in the placard detectors -->
+    <plugin name="gz::sim" filename="dummy">
+      <performer name="perf_blue_projectile">
+        <ref>blue_projectile</ref>
+        <geometry>
+          <box>
+            <size>0.057 0.057 0.057</size>
+          </box>
+        </geometry>
+      </performer>
+    </plugin>
+
     <!-- Load the plugin for the wind --> 
     <plugin
       filename="libUSVWind.so"
@@ -525,6 +493,91 @@
       <topic_wind_direction>/vrx/debug/wind/direction</topic_wind_direction>
      </plugin>
 
+    <include>
+      <uri>dock_2022</uri>
+      <pose>-480 190 0 0 0 1.0</pose>
+    </include>
+
+    <!-- The scan, dock, deliver scoring plugin -->
+    <plugin
+      filename="libScanDockScoringPlugin.so"
+      name="vrx::ScanDockScoringPlugin">
+      <vehicle>wamv</vehicle>
+      <task_name>scan_dock_deliver</task_name>
+      <task_info_topic>/vrx/task/info</task_info_topic>
+      <initial_state_duration>10</initial_state_duration>
+      <ready_state_duration>10</ready_state_duration>
+      <running_state_duration>300</running_state_duration>
+      <release_topic>/vrx/release</release_topic>
+      <!-- Color sequence -->
+      <color_sequence_topic>/vrx/scan_dock_deliver/color_sequence</color_sequence_topic>
+      <color_1>red</color_1>
+      <color_2>green</color_2>
+      <color_3>blue</color_3>
+      <!-- Dock checkers -->
+      <dock_bonus_points>15</dock_bonus_points>
+      <correct_dock_bonus_points>5</correct_dock_bonus_points>
+      <bays>
+        <bay>
+          <name>bay1</name>
+          <internal_activation_topic>/vrx/dock_2022/bay_1/contain</internal_activation_topic>
+          <external_activation_topic>/vrx/dock_2022/bay_1_external/contain</external_activation_topic>
+          <symbol_topic>/vrx/dock_2022_placard1/symbol</symbol_topic>
+          <min_dock_time>10.0</min_dock_time>
+          <correct_dock>False</correct_dock>
+          <symbol>red_rectangle</symbol>
+        </bay>
+        <bay>
+          <name>bay2</name>
+          <internal_activation_topic>/vrx/dock_2022/bay_2/contain</internal_activation_topic>
+          <external_activation_topic>/vrx/dock_2022/bay_2_external/contain</external_activation_topic>
+          <symbol_topic>/vrx/dock_2022_placard2/symbol</symbol_topic>
+          <min_dock_time>10.0</min_dock_time>
+          <correct_dock>True</correct_dock>
+          <symbol>blue_triangle</symbol>
+        </bay>
+        <bay>
+          <name>bay3</name>
+          <internal_activation_topic>/vrx/dock_2022/bay_3/contain</internal_activation_topic>
+          <external_activation_topic>/vrx/dock_2022/bay_3_external/contain</external_activation_topic>
+          <symbol_topic>/vrx/dock_2022_placard3/symbol</symbol_topic>
+          <min_dock_time>10.0</min_dock_time>
+          <correct_dock>False</correct_dock>
+          <symbol>yellow_circle</symbol>
+        </bay>
+      </bays>
+      <!-- Shooting targets -->
+      <targets>
+        <!-- Placard #1 -->
+        <target>
+          <topic>/vrx/dock_2022_placard1_big_hole/contain</topic>
+          <bonus_points>5</bonus_points>
+        </target>
+        <target>
+          <topic>/vrx/dock_2022_placard1_small_hole/contain</topic>
+          <bonus_points>10</bonus_points>
+        </target>
+        <!-- Placard #2 -->
+        <target>
+          <topic>/vrx/dock_2022_placard2_big_hole/contain</topic>
+          <bonus_points>5</bonus_points>
+        </target>
+        <target>
+          <topic>/vrx/dock_2022_placard2_small_hole/contain</topic>
+          <bonus_points>10</bonus_points>
+        </target>
+        <!-- Placard #3 -->
+        <target>
+          <topic>/vrx/dock_2022_placard3_big_hole/contain</topic>
+          <bonus_points>5</bonus_points>
+        </target>
+        <target>
+          <topic>/vrx/dock_2022_placard3_small_hole/contain</topic>
+          <bonus_points>10</bonus_points>
+        </target>
+      </targets>
+    </plugin>
+
     <!-- The wave field -->
     <plugin filename="libPublisherPlugin.so" name="vrx::PublisherPlugin">
       <message type="gz.msgs.Param" topic="/vrx/wavefield/parameters"
@@ -540,7 +593,7 @@
           key: "gain"
           value {
             type: DOUBLE
-            double_value: 0.00
+            double_value: 0.3
           }
         }
         params {

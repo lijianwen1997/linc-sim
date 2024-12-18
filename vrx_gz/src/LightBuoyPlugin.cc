@@ -155,8 +155,8 @@ bool LightBuoyPlugin::Implementation::ParseSDF(sdf::ElementPtr _sdf)
   }
 
   // The last two colors of the pattern are always black.
-  this->pattern[3] = "off";
-  this->pattern[4] = "off";
+    //  this->pattern[3] = "off";
+    //  this->pattern[4] = "off";
 
   // Required: visuals.
   if (!_sdf->HasElement("visuals"))
@@ -269,7 +269,7 @@ void LightBuoyPlugin::Implementation::Update()
   this->nextUpdateTime += std::chrono::duration<double>(1.0);
 
   // Start over if at end of pattern
-  if (this->state > 4u)
+  if (this->state > 2u)
     this->state = 0u;
 
   auto color = this->kColors[this->pattern[this->state]];
