@@ -313,7 +313,14 @@
       <sky></sky>
       <grid>false</grid>
       <ambient>1.0 1.0 1.0</ambient>
-      <background>0.8 0.8 0.8</background>
+      <background>0.1 0.1 0.1</background>
+       <fog>
+        <type>linear</type>
+        <color>1 1 1 1</color>
+        <start>0.1</start>
+        <end>100</end>
+        <density>10000</density>
+      </fog>
     </scene>
 
     <!-- Estimated latitude/longitude of sydneyregatta

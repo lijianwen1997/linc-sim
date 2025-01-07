@@ -317,6 +317,13 @@
       <grid>false</grid>
       <ambient>1.0 1.0 1.0</ambient>
       <background>0.8 0.8 0.8</background>
+        <fog>
+        <type>linear</type>
+        <color>1 1 1 1</color>
+        <start>0.1</start>
+        <end>1000</end>
+        <density>0</density>
+      </fog>
     </scene>
 
     <!-- Estimated latitude/longitude of lake harner
