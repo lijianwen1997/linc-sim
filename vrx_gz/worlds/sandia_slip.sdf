@@ -379,7 +379,7 @@
     <include>
       <name>tag_1</name>
       <uri>model://Apriltag36_11_00001</uri>
-      <pose>-10.65 -10.59 1.41 -1.57 0 -0.91</pose>
+      <pose>-10.53 -10.78 1.41 -1.57 0 -0.91</pose>
     </include>
 
     <include>
