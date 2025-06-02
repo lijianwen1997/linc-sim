@@ -376,15 +376,17 @@
 
     <include>
       <name>tag_1</name>
-      <uri>model://Apriltag36_11_00000</uri>
+      <uri>model://Apriltag36_11_00001</uri>
       <pose>-68.63 -155.47 1.41 -1.57 0 -0.27</pose>
     </include>
 
     <include>
       <name>tag_0</name>
-      <uri>model://Apriltag36_11_00001</uri>
+      <uri>model://Apriltag36_11_00000</uri>
       <pose>-65.74 -156.23 1.41 -1.57 0 -0.27</pose>
     </include>
+
+
 
     <include>
       <name>tag_2</name>
